@@ -57,18 +57,14 @@ for z in measurements:
   kf.predict()
   kf.update(np.array([z]))
   est_states.append(kf.X)
-~~~
-### Plotting
-~~~
+
 import matplotlib.pyplot as plt
 plt.plot([s[0] for s in true_states],label='true')
 plt.plot([s[0] for s in est_states],label='estimate')
 plt.legend
 plt.show()
 ~~~
-
-
-<H3>Output:</H3>
+## Output:
 <img width="641" alt="image" src="https://github.com/KoduruSanathKumarReddy/Ex-5--AAI/assets/69503902/63837746-734c-4419-b7a2-14de2c76dcbf">
 
 
